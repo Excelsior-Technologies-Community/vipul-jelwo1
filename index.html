@@ -7,7 +7,7 @@
     <title>Jelwo ( password: 1 )</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Marcellus&display=swap');
@@ -28,10 +28,131 @@
                         <a href="#"><i class="fa-solid fa-user-plus" style="color: rgb(0, 0, 0);"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-solid fa-heart-circle-plus" style="color: rgb(0, 0, 0);"></i></a>
+                        <a href="wishlist.html" class="wishlist-link">
+                            <i class="fa-solid fa-heart-circle-plus"></i>
+                            <span id="wishlist-count">(0)</span>
+                        </a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa-solid fa-bag-shopping" style="color: rgb(0, 0, 0);"></i></a>
+                        <a>
+                            <div class="menu-btn" onclick="openMenu()">
+                                <i class="fa-solid fa-bag-shopping" style="color: rgb(0, 0, 0);"></i>
+                                <span id="cart-count">(0)</span>
+                            </div>
+
+                            <div class="sidebar" id="sidebar">
+                                <div class="discount-title">
+                                    <p>New customers save 10% with code <b>WELCOME10</b></p>
+                                </div>
+                                <div class="close-btn" onclick="closeMenu()">✖</div>
+                                <div class="cart-header">
+                                    <h6>My shopping cart</h6>
+                                </div>
+                                <div class="show-data">
+                                    <!-- <p>add to cart data show</p> -->
+                                </div>
+                                <div class="slider">
+                                    <div class="heading">
+                                        <h6>You might also like</h6>
+                                    </div>
+                                    <div class="swiper mySwiper6">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="product-slider">
+                                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=533"
+                                                        alt="">
+                                                    <div class="img-data">
+                                                        <h6>Simple Pearl earrings</h6>
+                                                        <p>Rs. 15.00 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-slider">
+                                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-26.jpg?v=1742444221&width=533"
+                                                        alt="">
+                                                    <div class="img-data">
+                                                        <h6>Glitter diamond ring</h6>
+                                                        <p>Rs. 10.00 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-slider">
+                                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-21.jpg?v=1742443763&width=533"
+                                                        alt="">
+                                                    <div class="img-data">
+                                                        <h6>Gold nose pin</h6>
+                                                        <p>Rs. 12.00 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-slider">
+                                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-51.jpg?v=1742445540&width=533"
+                                                        alt="">
+                                                    <div class="img-data">
+                                                        <h6>Gemstone jhumkas</h6>
+                                                        <p>Rs. 18.00 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-slider">
+                                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-41.jpg?v=1742444936&width=533"
+                                                        alt="">
+                                                    <div class="img-data">
+                                                        <h6>Gemstone chain bracelet</h6>
+                                                        <p>Rs. 17.00 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-slider">
+                                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-11.jpg?v=1742443330&width=533"
+                                                        alt="">
+                                                    <div class="img-data">
+                                                        <h6>Framed gold pendant</h6>
+                                                        <p>Rs. 22.00 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-slider">
+                                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-31.jpg?v=1742444512&width=533"
+                                                        alt="">
+                                                    <div class="img-data">
+                                                        <h6>Flora diamond bangle</h6>
+                                                        <p>Rs. 28.00 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-slider">
+                                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-46.jpg?v=1742445430&width=533"
+                                                        alt="">
+                                                    <div class="img-data">
+                                                        <h6>Drop gold earrings</h6>
+                                                        <p>Rs. 14.00 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-slider">
+                                                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-36.jpg?v=1742444776&width=533"
+                                                        alt="">
+                                                    <div class="img-data">
+                                                        <h6>Cluster diamond ring</h6>
+                                                        <p>Rs. 12.00 </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -242,7 +363,9 @@
                                 Rs. 15.00
                                 <del>Rs. 20.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)" style="color: #b48a68;">Add
+                                To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -270,7 +393,8 @@
                                 Rs. 22.00
                                 <del>Rs. 40.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -298,7 +422,8 @@
                                 Rs. 18.00
                                 <del>Rs. 50.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -326,7 +451,8 @@
                                 Rs. 14.00
                                 <del>Rs. 44.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -354,7 +480,8 @@
                                 From Rs. 17.00
                                 <del> Rs. 39.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -380,7 +507,8 @@
                             <p class="price">
                                 Rs. 12.00
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -406,7 +534,8 @@
                             <p class="price">
                                 Rs. 28.00
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -432,7 +561,8 @@
                             <p class="price">
                                 Rs. 10.00
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -459,7 +589,8 @@
                                 Rs. 26.00
                                 <del>Rs. 30.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -485,7 +616,8 @@
                             <p class="price">
                                 Rs. 12.00
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -512,7 +644,8 @@
                                 Rs. 28.00
                                 <del>Rs. 35.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -538,7 +671,8 @@
                             <p class="price">
                                 Rs. 22.00
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -609,7 +743,7 @@
                                 Rs. 15.00
                                 <del>Rs. 20.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -636,7 +770,8 @@
                             <p class="price">
                                 Rs. 10.00
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -663,7 +798,8 @@
                             <p class="price">
                                 Rs. 12.00
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -691,7 +827,8 @@
                                 Rs. 18.00
                                 <del>Rs. 50.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -719,7 +856,8 @@
                                 From Rs. 17.00
                                 <del> Rs. 39.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -745,7 +883,8 @@
                             <p class="price">
                                 Rs. 22.00
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -771,7 +910,8 @@
                             <p class="price">
                                 Rs. 28.00
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -798,7 +938,8 @@
                                 Rs. 14.00
                                 <del>Rs. 44.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -824,7 +965,8 @@
                             <p class="price">
                                 Rs. 12.00
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -851,8 +993,8 @@
                                 Rs. 26.00
                                 <del>Rs. 30.00</del>
                             </p>
-
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -879,7 +1021,8 @@
                                 Rs. 22.00
                                 <del>Rs. 40.00</del>
                             </p>
-                            <a href="#">Add To Cart</a>
+                            <a href="#" onclick="addToWishlist(this)"><i class="fa-solid fa-heart"></i></a>
+                            <a href="#" onclick="addToCart(this)">Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -1192,9 +1335,9 @@
                             </div>
                             <div class="reel-txt">
                                 <h2>Chic diamond ring</h2>
-                                <span>Rs.22.00</span>
+                                <span class="price">Rs.22.00</span>
                             </div>
-                        </div><a href="#" class="reel-btn">Add to cart</a>
+                        </div><a href="#" class="reel-btn" onclick="addToCart(this)">Add to cart</a>
                     </div>
 
                 </div>
@@ -1216,7 +1359,7 @@
                                 <h2>Flower jhumka</h2>
                                 <span>Rs. 18.00</span>
                             </div>
-                        </div><a href="#" class="reel-btn">Add to cart</a>
+                        </div><a href="#" class="reel-btn" onclick="addToCart(this)">Add to cart</a>
                     </div>
 
                 </div>
@@ -1238,7 +1381,7 @@
                                 <h2>Sherbi ring</h2>
                                 <span>Rs.22.00</span>
                             </div>
-                        </div><a href="#" class="reel-btn">Add to cart</a>
+                        </div><a href="#" class="reel-btn" onclick="addToCart(this)">Add to cart</a>
                     </div>
 
                 </div>
@@ -1260,7 +1403,7 @@
                                 <h2>Drop gold earrings</h2>
                                 <span>Rs.14.00</span>
                             </div>
-                        </div><a href="#" class="reel-btn">Add to cart</a>
+                        </div><a href="#" class="reel-btn" onclick="addToCart(this)">Add to cart</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -1281,7 +1424,7 @@
                                 <h2>Flower pendant</h2>
                                 <span>Rs.22.00</span>
                             </div>
-                        </div><a href="#" class="reel-btn">Add to cart</a>
+                        </div><a href="#" class="reel-btn" onclick="addToCart(this)">Add to cart</a>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -1302,7 +1445,7 @@
                                 <h2>Sherbi ring</h2>
                                 <span>Rs.22.00</span>
                             </div>
-                        </div><a href="#" class="reel-btn">Add to cart</a>
+                        </div><a href="#" class="reel-btn" onclick="addToCart(this)">Add to cart</a>
                     </div>
                 </div>
             </div>
@@ -1420,7 +1563,7 @@
 </body>
 
 </html>
-
+<script src="jelwo.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
 <script>
@@ -1478,10 +1621,22 @@
     var swiper = new Swiper(".mySwiper5 ", {
         slidesPerView: 5,
         spaceBetween: 30,
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // }
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        }
+    },
+    );
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper6", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 5500,
+            disableOnInteraction: false,
+        }
+
     },
     );
 </script>
@@ -1497,4 +1652,111 @@
         document.getElementById("videoFrame").src = "";
     }
 </script>
-<script src="suxnix.js"></script>
+<script>function openMenu() {
+        document.getElementById("sidebar").classList.add("active");
+    }
+
+    function closeMenu() {
+        document.getElementById("sidebar").classList.remove("active");
+    }</script>
+<script>
+    function addToCart(btn) {
+
+        document.getElementById("sidebar").classList.add("active");
+
+        let card = btn.closest(".product-card");
+
+        let img = card.querySelector(".product-image img").src;
+        let name = card.querySelector("h3").innerText;
+        let price = card.querySelector(".price").innerText;
+
+        document.querySelector(".show-data").innerHTML = `
+    
+    <div class="cart-product">
+
+        <div class="cart-img">
+            <img src="${img}" alt="">
+        </div>
+
+        <div class="cart-content">
+            <h3>${name}</h3>
+
+            <p class="cart-price">${price}</p>
+
+            <p class="cart-color">
+                <strong>Color:</strong> Gold
+            </p>
+
+            <div class="cart-bottom">
+
+                <div class="qty-box">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+
+                <a href="#" onclick="deleteItem(this)"><i class="fa-regular fa-trash-can delete-btn"></i></a>
+                <div class="cart-footer">
+                                        <p>Order special instructions</p>
+                                        <div class="subtotal">
+                                            <h3>Subtotal</h3>
+                                            <h3 id="subtotal-price">Rs. 15.00</h3>
+                                        </div>
+
+                                        <p>Taxes, discounts and shipping calculated at checkout.</p>
+
+                                        <div class="cart-buttons">
+                                            <button class="view-cart">VIEW CART</button>
+                                            <button class="checkout">CHECKOUT</button>
+                                        </div>
+                                    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    `;
+    }
+    function deleteItem(btn) {
+        btn.closest('.cart-product').remove();
+    }
+</script>
+<script>function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        document.getElementById("cart-count").innerText = `(${cart.length})`;
+    }
+    function updateWishlistCount() {
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+        console.log("Wishlist Items:", wishlist.length);
+
+        document.getElementById("wishlist-count").innerText =
+            `(${wishlist.length})`;
+    }
+
+    updateCartCount();
+
+    function addToWishlist(btn) {
+
+        let card = btn.closest(".product-card");
+
+        let product = {
+            img: card.querySelector(".product-image img").src,
+            name: card.querySelector("h3").innerText,
+            price: card.querySelector(".price").innerText
+        };
+
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+        wishlist.push(product);
+
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+        updateWishlistCount(); // refresh count
+    }
+
+    // show count when page loads
+    updateWishlistCount();
+</script>
