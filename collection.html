@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jelwo ( password: 1 )</title>
     <link rel="stylesheet" href="collection.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <style>
@@ -55,7 +54,7 @@
                                     <div class="heading">
                                         <h6>You might also like</h6>
                                     </div>
-                                    <div class="swiper mySwiper6">
+                                    <div class="swiper mySwiper">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="product-slider">
@@ -187,147 +186,540 @@
             <h1>Collections</h1>
         </div>
     </section>
-    <section class="collection">
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>14K, 58.3%</h3>
+
+    <div class="data-filter">
+        <div class="all-data">
+            <h2>Categories</h2>
+
+            <div class="filterbar">
+
+
+                <label>
+                    <input type="checkbox" value="14K" onchange="filterProducts()">
+                    14K, 58.3%
+                    <span>(12)</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="18K" onchange="filterProducts()">
+                    18K, 75.0%
+                    <span>(12)</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="22K" onchange="filterProducts()">
+                    22K, 91.7%
+                    <span>(12)</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="24K" onchange="filterProducts()">
+                    24K, 99.9%
+                    <span>(12)</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="BANGLES" onchange="filterProducts()">
+                    Bangles
+                    <span>(12)</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="BEST SELLER" onchange="filterProducts()">
+                    Best Seller
+                    <span>(12)</span>
+                </label>
+
+                <label>
+                    <input type="checkbox" value="BRACELETS" onchange="filterProducts()">
+                    Bracelets
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="BROOCH" onchange="filterProducts()">
+                    BROOCH
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="CHAIN" onchange="filterProducts()">
+                    CHAIN
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="DIAMOND" onchange="filterProducts()">
+                    DIAMOND
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="DIAMONDS" onchange="filterProducts()">
+                    DIAMONDS
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="EARRING" onchange="filterProducts()">
+                    EARRING
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="EARRINGS" onchange="filterProducts()">
+                    EARRINGS
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="GOLD" onchange="filterProducts()">
+                    GOLD
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="JEWELRY" onchange="filterProducts()">
+                    JEWELRY
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="MEENAKARI" onchange="filterProducts()">
+                    MEENAKARI
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="NECKLACE" onchange="filterProducts()">
+                    NECKLACE
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="NECKLACES" onchange="filterProducts()">
+                    NECKLACES
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="NEW PRODUCT" onchange="filterProducts()">
+                    NEW PRODUCT
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="NOSE PINS" onchange="filterProducts()">
+                    NOSE PINS
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="PENDANT" onchange="filterProducts()">
+                    PENDANT
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="PENDANTS" onchange="filterProducts()">
+                    PENDANTS
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="PLATINUM RING" onchange="filterProducts()">
+                    PLATINUM RING
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="RINGS" onchange="filterProducts()">
+                    RINGS
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="ROSE GOLD" onchange="filterProducts()">
+                    ROSE GOLD
+                    <span>(12)</span>
+                </label>
+                <label>
+                    <input type="checkbox" value="TRENDING PRODUCT" onchange="filterProducts()">
+                    TRENDING PRODUCT
+                    <span>(12)</span>
+                </label>
+
+            </div>
+            <div class="filter-sidebar">
+                <h2>Filter</h2>
+
+                <div class="filter-section">
+                    <h3>Availability</h3>
+
+                    <div class="filter-header">
+                        <span id="selectedCount">0 selected</span>
+                        <a href="#" onclick="resetFilter()">Reset</a>
+                    </div>
+
+                    <label>
+                        <input type="checkbox" value="In Stock" onchange="filterStock()">
+                        In Stock <span>(12)</span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Out Stock" onchange="filterStock()">
+                        Out of Stock <span>(5)</span>
+                    </label>
+                </div>
+                <div class="price-filter">
+
+                    <h2>Price</h2>
+
+                    <div class="price-header">
+                        <span>The highest price is Rs. 28.00</span>
+                        <a href="#" onclick="resetPrice()">Reset</a>
+                    </div>
+
+                    <div class="slider-box">
+                        <input type="range" id="minRange" min="0" max="28" value="0">
+                        <input type="range" id="maxRange" min="0" max="28" value="28">
+                    </div>
+
+                    <div class="price-inputs">
+                        <div class="price-field">
+                            <label>From</label>
+                            <input type="number" id="minPrice" value="0">
+                        </div>
+
+                        <span>-</span>
+
+                        <div class="price-field">
+                            <label>To</label>
+                            <input type="number" id="maxPrice" value="28">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="color-filter">
+
+                <h2>Color</h2>
+
+                <div class="filter-header1">
+                    <span id="selectedColorCount">0 selected</span>
+                    <a href="#" onclick="resetColor()">Reset</a>
+                </div>
+
+                <div class="color-list">
+
+                    <label>
+                        <input type="checkbox" value="Beige" onchange="filterColor()">
+                        <span class="color-dot beige"></span>
+                        Beige
+                        <span>(5)</span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Bronze" onchange="filterColor()">
+                        <span class="color-dot bronze"></span>
+                        Bronze
+                        <span>(1)</span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Brown" onchange="filterColor()">
+                        <span class="color-dot brown"></span>
+                        Brown
+                        <span>(7)</span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Gold" onchange="filterColor()">
+                        <span class="color-dot gold"></span>
+                        Gold
+                        <span>(12)</span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Orange" onchange="filterColor()">
+                        <span class="color-dot orange"></span>
+                        Orange
+                        <span>(4)</span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Silver" onchange="filterColor()">
+                        <span class="color-dot silver"></span>
+                        Silver
+                        <span>(3)</span>
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Yellow" onchange="filterColor()">
+                        <span class="color-dot yellow"></span>
+                        Yellow
+                        <span>(4)</span>
+                    </label>
+
+                </div>
+
+            </div>
+            <div class="swiper-1">
+                <div class="swiper mySwiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="data-1">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=533"
+                                    alt="">
+                                <div class="content">
+                                    <p>Simple Pearl earrings</p>
+                                    <div class="price"><span>RS. 15.00</span></div>
+                                </div>
+                            </div>
+                            <div class="data-2"><img
+                                    src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-11.jpg?v=1742443330&width=533"
+                                    alt="">
+                                <div class="content">
+                                    <p>Framed gold pendant</p>
+                                    <div class="price"><span>RS. 22.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="data-1">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-26.jpg?v=1742444221&width=533"
+                                    alt="">
+                                <div class="content">
+                                    <p>Glitter diamond ring</p>
+                                    <div class="price"><span>RS. 10.00</span></div>
+                                </div>
+                            </div>
+                            <div class="data-2"><img
+                                    src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-31.jpg?v=1742444512&width=533"
+                                    alt="">
+                                <div class="content">
+                                    <p>Flora diamond bangle</p>
+                                    <div class="price"><span>RS. 28.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="data-1">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-21.jpg?v=1742443763&width=533"
+                                    alt="">
+                                <div class="content">
+                                    <p>Gold nose pin</p>
+                                    <div class="price"><span>RS. 12.00</span></div>
+                                </div>
+                            </div>
+                            <div class="data-2"><img
+                                    src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-46.jpg?v=1742445430&width=533"
+                                    alt="">
+                                <div class="content">
+                                    <p>Drop gold earrings</p>
+                                    <div class="price"><span>RS. 14.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="data-1">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-51.jpg?v=1742445540&width=533"
+                                    alt="">
+                                <div class="content">
+                                    <p>Gemstone jhumkas</p>
+                                    <div class="price"><span>RS. 18.00</span></div>
+                                </div>
+                            </div>
+                            <div class="data-2"><img
+                                    src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-36.jpg?v=1742444776&width=533"
+                                    alt="">
+                                <div class="content">
+                                    <p>Cluster diamond ring</p>
+                                    <div class="price"><span>RS. 12.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="data-1">
+                                <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-41.jpg?v=1742444936&width=533"
+                                    alt="">
+                                <div class="content">
+                                    <p>Gemstone chain bracelet</p>
+                                    <div class="price"><span>RS. 17.00</span></div>
+                                </div>
+                            </div>
+                            <div class="data-2"><img
+                                    src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-1.jpg?v=1742443985&width=533"
+                                    alt="">
+                                <div class="content">
+                                    <p>Cluster diamond ring</p>
+                                    <div class="price"><span>RS. 26.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-collection-side-banner.jpg?v=1742637512&width=352"
+                alt="">
+
         </div>
 
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-46.jpg?v=1742445430&width=832" alt="">
-            <h3>18K, 75.0%</h3>
-        </div>
+        <section class="collection">
+            <p>Products</p>
+            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-collection-banner.jpg?v=1742641202&width=1920"
+                alt="">
+            <div class="collection-data">
+                <div class="product-card" data-category="14K" data-stock="In Stock" data-price="12" data-color="Gold">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>14K, 58.3%</h3>
+                </div>
 
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>22K, 91.7%</h3>
-        </div>
+                <div class="product-card" data-category="18K" data-stock="In Stock" data-price="18">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-46.jpg?v=1742445430&width=832"
+                        alt="">
+                    <h3>18K, 75.0%</h3>
+                </div>
 
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>24K, 99.9%</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>BANGLES</h3>
-        </div>
-        <div class="product-card card-1">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832" alt="">
-            <h3>BEST SELLER</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>BRACELETS</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>BROOCH</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>CHAIN</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-56.jpg?v=1742445682&width=832" alt="">
-            <h3>DIAMOND</h3>
-        </div>
-        <div class="product-card card-1">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=832" alt="">
-            <h3>DIAMONDS</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-56.jpg?v=1742445682&width=832" alt="">
-            <h3>EARRING</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-56.jpg?v=1742445682&width=832" alt="">
-            <h3>EARRINGS</h3>
-        </div>
-        <div class="product-card card-1">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-56.jpg?v=1741670785&width=832" alt="">
-            <h3>GOLD</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>JEWELRY</h3>
-        </div>
-        <div class="product-card card-1">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832" alt="">
-            <h3>MEENAKARI</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>NECKLACE</h3>
-        </div>
-        <div class="product-card card-1">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832" alt="">
-            <h3>NECKLACE</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-56.jpg?v=1742445682&width=832" alt="">
-            <h3>NECKLACES</h3>
-        </div>
-        <div class="product-card card-1">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832" alt="">
-            <h3>NEW PRODUCT</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-16.jpg?v=1742443575&width=832" alt="">
-            <h3>NOSE PINS</h3>
-        </div>
-        <div class="product-card card-1">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832" alt="">
-            <h3>PENDANT</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-56.jpg?v=1742445682&width=832" alt="">
-            <h3>PENDANTS</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>PLATINUM RING</h3>
-        </div>
-        <div class="product-card card-1">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=832" alt="">
-            <h3>RINGS</h3>
-        </div>
-        <div class="product-card">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832" alt="">
-            <h3>ROSE GOLD</h3>
-        </div>
-        <div class="product-card card-1">
-            <span class="count">12</span>
-            <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832" alt="">
-            <h3>TRENDING PRODUCT</h3>
-        </div>
-    </section>
+                <div class="product-card" data-category="22K" data-stock="In Stock" data-price="19">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>22K, 91.7%</h3>
+                </div>
 
+                <div class="product-card" data-category="24K" data-stock="In Stock" data-price="21">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>24K, 99.9%</h3>
+                </div>
+                <div class="product-card" data-category="BANGLES" data-stock="In Stock" data-price="15">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>BANGLES</h3>
+                </div>
+                <div class="product-card card-1" data-category="BEST SELLER" data-stock="Out Stock" data-price="22">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832"
+                        alt="">
+                    <h3>BEST SELLER</h3>
+                </div>
+                <div class="product-card" data-category="BRACELETS" data-stock="In Stock" data-price="25">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>BRACELETS</h3>
+                </div>
+                <div class="product-card" data-category="BROOCH" data-stock="Out Stock" data-price="18">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>BROOCH</h3>
+                </div>
+                <div class="product-card" data-category="CHAIN" data-stock="In Stock" data-price="28">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>CHAIN</h3>
+                </div>
+                <div class="product-card" data-category="DIAMOND" data-stock="Out Stock" data-price="12">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-56.jpg?v=1742445682&width=832"
+                        alt="">
+                    <h3>DIAMOND</h3>
+                </div>
+                <div class="product-card card-1" data-category="DIAMONDS" data-stock="In Stock" data-price="12">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=832"
+                        alt="">
+                    <h3>DIAMONDS</h3>
+                </div>
+                <div class="product-card" data-category="EARRING" data-stock="In Stock" data-price="19">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-56.jpg?v=1742445682&width=832"
+                        alt="">
+                    <h3>EARRING</h3>
+                </div>
+                <div class="product-card" data-category="EARRINGS" data-stock="Out Stock" data-price="22">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-56.jpg?v=1742445682&width=832"
+                        alt="">
+                    <h3>EARRINGS</h3>
+                </div>
+                <div class="product-card card-1" data-category="GOLD" data-stock="In Stock" data-price="26">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-56.jpg?v=1741670785&width=832"
+                        alt="">
+                    <h3>GOLD</h3>
+                </div>
+                <div class="product-card" data-category="JEWELRY" data-stock="In Stock" data-price="18">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>JEWELRY</h3>
+                </div>
+                <div class="product-card card-1" data-category="MEENAKARI" data-stock="Out Stock" data-price="12">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832"
+                        alt="">
+                    <h3>MEENAKARI</h3>
+                </div>
+                <div class="product-card" data-category="NECKLACE" data-stock="In Stock" data-price="19">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>NECKLACE</h3>
+                </div>
+                <div class="product-card card-1" data-category="NECKLACE" data-stock="In Stock" data-price="22">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832"
+                        alt="">
+                    <h3>NECKLACE</h3>
+                </div>
+                <div class="product-card" data-category="NECKLACES" data-stock="In Stock" data-price="15">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-56.jpg?v=1742445682&width=832"
+                        alt="">
+                    <h3>NECKLACES</h3>
+                </div>
+                <div class="product-card card-1" data-category="NEW PRODUCT" data-stock="In Stock" data-price="16">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832"
+                        alt="">
+                    <h3>NEW PRODUCT</h3>
+                </div>
+                <div class="product-card" data-category="NOSE PINS" data-stock="In Stock" data-price="19">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-16.jpg?v=1742443575&width=832"
+                        alt="">
+                    <h3>NOSE PINS</h3>
+                </div>
+                <div class="product-card card-1" data-category="PENDANT" data-stock="In Stock" data-price="24">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832"
+                        alt="">
+                    <h3>PENDANT</h3>
+                </div>
+                <div class="product-card" data-category="PENDANTS" data-stock="In Stock" data-price="17">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-56.jpg?v=1742445682&width=832"
+                        alt="">
+                    <h3>PENDANTS</h3>
+                </div>
+                <div class="product-card" data-category="PLATINUM RING" data-stock="In Stock" data-price="16">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>PLATINUM RING</h3>
+                </div>
+                <div class="product-card card-1" data-category="RINGS" data-price="16">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-21.jpg?v=1741607520&width=832"
+                        alt="">
+                    <h3>RINGS</h3>
+                </div>
+                <div class="product-card" data-category="ROSE GOLD" data-price="12">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-product-6.jpg?v=1742442751&width=832"
+                        alt="">
+                    <h3>ROSE GOLD</h3>
+                </div>
+                <div class="product-card card-1" data-category="TRENDING PRODUCT" data-price="10">
+                    <span class="count">12</span>
+                    <img src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-pro-36.jpg?v=1741666478&width=832"
+                        alt="">
+                    <h3>TRENDING PRODUCT</h3>
+                </div>
+            </div>
+        </section>
+    </div>
     <footer class="footer">
         <div class="footer-container">
 
@@ -429,17 +821,20 @@
 
         <div class="payment-methods">
             <div class="payment-box" style="color: #142FBD;"><i class="fa-brands fa-cc-visa"></i></div>
-            <div class="payment-box" style="color: #EB001B;"><i class="fa-brands fa-cc-mastercard"></i></div>
+            <div class="payment-box" style="color: #EB001B;"><i class="fa-brands fa-cc-mastercard"></i>
+            </div>
             <div class="payment-box" style="color: #0071CE;"><i class="fa-brands fa-cc-amex"></i></div>
-            <div class="payment-box" style="background: transparent;;"><i class="fa-brands fa-cc-paypal"></i></div>
+            <div class="payment-box" style="background: transparent;;"><i class="fa-brands fa-cc-paypal"></i>
+            </div>
             <div class="payment-box"><i class="fa-brands fa-cc-diners-club"></i></div>
-            <div class="payment-box" style="color: rgb(67 63 63);"><i class="fa-brands fa-cc-discover"></i></div>
+            <div class="payment-box" style="color: rgb(67 63 63);"><i class="fa-brands fa-cc-discover"></i>
+            </div>
         </div>
     </div>
 </body>
 
 </html>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script>function openMenu() {
         document.getElementById("sidebar").classList.add("active");
     }
@@ -603,3 +998,27 @@
     // show count when page loads
     updateWishlistCount();
 </script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        }
+    },
+    );
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper1", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        }
+    },
+    );
+</script>
+
+<script src="collection.js"></script>
