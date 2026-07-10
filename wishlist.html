@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jelwo ( password: 1 )</title>
     <link rel="stylesheet" href="wishlist.css">
+    <link rel="stylesheet" href="mainresponsive.css">
+    <link rel="stylesheet" href="wishlistresponsive.css ">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <style>
@@ -17,6 +19,42 @@
 <body>
     <header>
         <nav>
+            <div class="leftsidebar1">
+                <div class="menu-btn1" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div id="leftSidebar" class="left-sidebar">
+                <div class="sidebar-header">
+                    <span>MENU</span>
+                    <span class="closebtn" onclick="closeMenu()">×</span>
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="collection.html">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#">Products</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Pages</a>
+                        </li>
+                        <li>
+                            <a href="#">INR ₹</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="nav-left"><img class="main-logo"
                     src="https://jelwo.myshopify.com/cdn/shop/files/jewelry-4-logo.png?v=1744805986&width=352" alt="">
                 <p>Free UK standard delivery on all orders.</p>
@@ -24,7 +62,8 @@
             <div class="nav-right"><input type="search" placeholder="Search Product">
                 <ul>
                     <li>
-                        <a href="#"><i class="fa-solid fa-user-plus" style="color: rgb(0, 0, 0);"></i></a>
+                        <a href="#" class="followers"><i class="fa-solid fa-user-plus"
+                                style="color: rgb(0, 0, 0);"></i></a>
                     </li>
                     <li>
                         <a href="wishlist.html" class="wishlist-link">
@@ -34,7 +73,7 @@
                     </li>
                     <li>
                         <a>
-                            <div class="menu-btn" onclick="openMenu()">
+                            <div class="menu-btn" onclick="openCart()">
                                 <i class="fa-solid fa-bag-shopping" style="color: rgb(0, 0, 0);"></i>
                                 <span id="cart-count">(0)</span>
                             </div>
@@ -43,7 +82,7 @@
                                 <div class="discount-title">
                                     <p>New customers save 10% with code <b>WELCOME10</b></p>
                                 </div>
-                                <div class="close-btn" onclick="closeMenu()">✖</div>
+                                <div class="close-btn" onclick="closeCart()">✖</div>
                                 <div class="cart-header">
                                     <h6>My shopping cart</h6>
                                 </div>
@@ -63,6 +102,7 @@
                                                     <div class="img-data">
                                                         <h6>Simple Pearl earrings</h6>
                                                         <p>Rs. 15.00 </p>
+                                                       
                                                     </div>
                                                 </div>
                                             </div>
@@ -301,12 +341,20 @@
 </body>
 
 </html>
-<script>function openMenu() {
+<script>function openCart() {
         document.getElementById("sidebar").classList.add("active");
     }
 
-    function closeMenu() {
+    function closeCart() {
         document.getElementById("sidebar").classList.remove("active");
+    }
+
+    function openMenu() {
+        document.getElementById("leftSidebar").classList.add("active");
+    }
+
+    function closeMenu() {
+        document.getElementById("leftSidebar").classList.remove("active");
     }</script>
 <script>
     function addToCart(btn) {
@@ -320,51 +368,51 @@
         let price = card.querySelector(".price").innerText;
 
         document.querySelector(".show-data").innerHTML = `
-    
-    <div class="cart-product">
 
-        <div class="cart-img">
-            <img src="${img}" alt="">
-        </div>
+            <div class="cart-product">
 
-        <div class="cart-content">
-            <h3>${name}</h3>
-
-            <p class="cart-price">${price}</p>
-
-            <p class="cart-color">
-                <strong>Color:</strong> Gold
-            </p>
-
-            <div class="cart-bottom">
-
-                <div class="qty-box">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
+                <div class="cart-img">
+                    <img src="${img}" alt="">
                 </div>
 
-                <a href="#" onclick="deleteItem(this)"><i class="fa-regular fa-trash-can delete-btn"></i></a>
-                <div class="cart-footer">
-                                        <p>Order special instructions</p>
-                                        <div class="subtotal">
-                                            <h3>Subtotal</h3>
-                                            <h3 id="subtotal-price">Rs. 00.00</h3>
-                                        </div>
+                <div class="cart-content">
+                    <h3>${name}</h3>
 
-                                        <p>Taxes, discounts and shipping calculated at checkout.</p>
+                    <p class="cart-price">${price}</p>
 
-                                        <div class="cart-buttons">
-                                            <button class="view-cart">VIEW CART</button>
-                                            <button class="checkout">CHECKOUT</button>
-                                        </div>
-                                    </div>
+                    <p class="cart-color">
+                        <strong>Color:</strong> Gold
+                    </p>
+
+                    <div class="cart-bottom">
+
+                        <div class="qty-box">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+
+                        <a href="#" onclick="deleteItem(this)"><i class="fa-regular fa-trash-can delete-btn"></i></a>
+                        <div class="cart-footer">
+                            <p>Order special instructions</p>
+                            <div class="subtotal">
+                                <h3>Subtotal</h3>
+                                <h3 id="subtotal-price">Rs. 00.00</h3>
+                            </div>
+
+                            <p>Taxes, discounts and shipping calculated at checkout.</p>
+
+                            <div class="cart-buttons">
+                                <button class="view-cart">VIEW CART</button>
+                                <button class="checkout">CHECKOUT</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
-
-        </div>
-
-    </div>
 
     `;
 
@@ -380,11 +428,11 @@
     if (wishlist.length === 0) {
         container.style.display = "block";
         container.innerHTML = `
-        <h2>Your wishlist is empty
-            <a href="index.html">return to store</a>
-        </h2>
-        
-    `;
+            <h2>Your wishlist is empty
+                <a href="index.html">return to store</a>
+            </h2>
+
+            `;
 
     } else {
 

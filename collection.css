@@ -15,12 +15,24 @@ nav {
     display: flex;
 }
 
+.leftsidebar1 {
+    display: none;
+}
+
+.left-sidebar {
+    display: none;
+}
+
 .main-logo {
     width: 105px;
     height: 24px;
     position: relative;
     top: 23px;
     left: 27px;
+}
+
+.top-bar {
+    display: none;
 }
 
 .nav-left p {

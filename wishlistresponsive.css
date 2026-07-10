@@ -1,0 +1,270 @@
+@media screen and (max-width:1024px) {
+    body {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav {
+        justify-content: flex-end;
+    }
+
+    .nav-left p {
+        display: none;
+    }
+
+    .leftsidebar1 {
+        display: block;
+    }
+
+    .left-sidebar {
+        display: block;
+    }
+
+    .left-sidebar {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background: #fff;
+        transition: 0.3s;
+        z-index: 9999;
+    }
+
+    .left-sidebar.active {
+        left: 0;
+    }
+
+    .main-logo {
+        left: -132px;
+    }
+
+    .nav-right {
+        display: flex;
+        position: relative;
+        right: 84px;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .menu-btn1 {
+        display: flex;
+        position: absolute;
+        left: 12px;
+        top: 16px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .sidebar-header {
+        background: #000;
+        color: white;
+        height: 51px;
+        width: 100%;
+    }
+
+    .sidebar-header span {
+        position: relative;
+        top: 0;
+        left: 16px;
+    }
+
+    .sidebar-header .closebtn {
+        position: relative;
+        left: 216px;
+        font-size: 33px;
+    }
+
+    .menu ul {
+        padding: 0;
+        position: relative;
+    }
+
+    .menu li {
+        list-style-type: none;
+        border-bottom: 1px solid #c2c2c2;
+        padding: 20px;
+        width: 87%;
+    }
+
+    .menu a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .nav-right input {
+        display: none;
+    }
+
+    .title {
+        position: absolute;
+        top: 149px;
+        left: 438px;
+        text-align: center;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .try-home {
+        left: 0;
+    }
+
+    .wishlist {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -30px 0 0 -30px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        width: 100%;
+    }
+
+    .main-logo {
+        left: 0px;
+    }
+
+    .title {
+        position: absolute;
+        top: 149px;
+        left: 316px;
+        text-align: center;
+    }
+
+    .subscribe-box input {
+        width: 296px;
+    }
+
+    .subscribe-box button {
+        width: 198px;
+        font-size: 17px;
+    }
+
+    .footer-container {
+        gap: 85px;
+    }
+
+    .footer-bottom {
+        padding: 5px 40px;
+    }
+
+    .footer-bottom p {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:426px) {
+    body {
+        width: 100%;
+    }
+
+    .main-logo {
+        left: 0px;
+    }
+
+    .subscribe-box input {
+        width: 296px;
+    }
+
+    .subscribe-box button {
+        width: 198px;
+        font-size: 17px;
+    }
+
+    .title {
+        position: absolute;
+        top: 149px;
+        left: 144px;
+        text-align: center;
+    }
+
+    .title p {
+        font-size: 13px;
+    }
+
+    .title h1 {
+        font-size: 35px;
+        position: relative;
+        left: 6px;
+    }
+
+    .wishlist {
+        width: 63%;
+    }
+
+    .wishlist {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .product-card {
+        height: 402px;
+    }
+
+    .product-image img {
+        width: 125px;
+        height: 148px;
+    }
+
+    .footer-container {
+        gap: 85px;
+    }
+
+    .footer-bottom {
+        padding: 5px 40px;
+    }
+
+    .footer-bottom p {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .main-logo {
+        left: 150px;
+    }
+
+    .product-image img {
+        width: 99px;
+        height: 125px;
+    }
+
+    .product-card {
+        height: 428px;
+    }
+}
+
+@media screen and (max-width:321px) {
+    .wishlist {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+
+    .title {
+        position: absolute;
+        top: 149px;
+        left: 98px;
+        text-align: center;
+    }
+
+    .subscribe-box input {
+        width: 232px;
+    }
+}
